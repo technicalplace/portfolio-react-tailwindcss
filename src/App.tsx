@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import { Header } from './components/header/Header';
+import { Link } from './components/Link/Link';
 
 function App() {
+
+
   return (
-    <>
-      <Header />
-      <div className='bg-black'>
-        <h1 className='bg-yellow-300 text-6xl mt-10 lg:max-w-xl mx-auto outline-purple-800 outline-8 outline-double rounded-sm'>Hello React</h1>
+      <div className='bg-gradient-to-r from-sky-700 from-30% via-sky-800 via-40% to-sky-950 to-70% w-ful h-full'>
+        <h1 className='text-8xl mx-auto w-80 pt-32 text-center text-emerald-500 title__font'>S.Tech</h1>
+        <Link />
       </div>
-    </>
   );
 }
 

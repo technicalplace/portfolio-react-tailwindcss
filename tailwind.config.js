@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: {
+          skyBlue: '#0369a1',
+        }
+      }
     },
   },
   plugins: [],
