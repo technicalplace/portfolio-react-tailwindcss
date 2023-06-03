@@ -9,7 +9,7 @@ import { Home } from "./components/Home/Home";
 
 function App() {
   return (
-    <div className="bg-gradient-to-r from-sky-700 from-30% via-sky-800 via-40% to-sky-950 to-70% w-full h-screen">
+    <div className="bg-gradient-to-r from-sky-700 from-30% via-sky-800 via-40% to-sky-950 to-70% w-full h-full">
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Application" element={<Application />}></Route>
