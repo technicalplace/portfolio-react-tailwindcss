@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Sns = () => {
   return (
-    <div>Sns</div>
+    <div className='bg-emerald-600 h-32'>Sns</div>
   )
 }
