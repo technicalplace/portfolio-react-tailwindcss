@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Display = () => {
+export const Display = (props: {
+  value: string;
+}) => {
   return (
-    <div className='w-40 mx-auto h-full'>
-      0
-    </div>
+    <div className='w-40 mx-auto h-full'>{props.value}</div>
   )
 }
