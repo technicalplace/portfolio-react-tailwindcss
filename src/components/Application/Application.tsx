@@ -1,37 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { AppList } from "./AppList";
+import { CiImageOn } from "react-icons/ci";
+import { FaCalculator } from "react-icons/fa";
+
 
 export const Application = () => {
   const appListDetails = [
     {
       id: 0,
+      icon: <CiImageOn />,
       appName: 'Photo Search App',
+      url: 'PhotoSearch',
       description: 'I created a photo search app using React. Please feel free to take a look.',
     },
     {
       id: 1,
+      icon: <FaCalculator />,
       appName: 'Simple calculator app',
+      url: 'Calculate',
       description: 'I created a simple calculator app using React and TypeScript, Please feel free to take a look.',
     },
     {
       id: 2,
       appName: 'Todo List',
+      url: 'TodoList',
       description: 'I created a TodoList app using React. Please feel free to take a look.',
     },
     {
       id: 3,
       appName: 'Pagination',
+      url: 'Pagination',
       description: 'I created a pagination feature using React. Please feel free to take a look.',
     },
     {
       id: 4,
       appName: 'Modal',
+      url: 'Modal',
       description: 'I created a modal feature using React. Please feel free to take a look.',
     },
     {
       id: 5,
       appName: 'Toggle Button',
+      url: 'ToggleButton',
       description: 'I created a Toggle Button feature using React. Please feel free to take a look.',
     },
   ]
