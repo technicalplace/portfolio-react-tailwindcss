@@ -52,8 +52,8 @@ function handleNumberButton(button: string, state: State): State {
       current: button,
       operand: state.operand,
       operator: state.operator,
-      isNextClear: false
-    }
+      isNextClear: false,
+    };
   }
   if (state.current === "0") {
     return {
@@ -80,7 +80,7 @@ function handleOperatorButton(button: string, state: State): State {
       current: state.current,
       operand: parseFloat(state.current),
       operator: button,
-      isNextClear: false,
+      isNextClear: true,
     };
   }
   const nextValue = operate(state);
@@ -154,13 +154,12 @@ function handleEqualButton(state: State): State {
   };
 }
 function operate(state: State): number {
-  const current = parseFloat(state.current)
-  if (state.operator === '+') {
-    return state.operand + current
+  const current = parseFloat(state.current); // currentを数値に変換
+  if (state.operator === "+") {
+    return state.operand + current;
   }
-  if (state.operator === '-') {
-    return state.operand - current
+  if (state.operator === "-") {
+    return state.operand - current;
   }
   return current;
 }
-

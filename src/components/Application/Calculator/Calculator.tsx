@@ -13,6 +13,7 @@ export const Calculator = () => {
   const buttonHandler = (code: string) => {
     const nextState = Calculate(code, state);
     setState(nextState);
+    console.log(code);
   }
   return (
     <div>
