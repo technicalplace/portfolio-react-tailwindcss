@@ -41,7 +41,7 @@ export const Home = () => {
           <Link
             key={id}
             to={href}
-            className="px-4 pt-8 pb-4 mx-3 box-border h-full text-emerald-500 text-center border-8 border-double border-teal-500 rounded-xl hover:scale-110 duration-1000"
+            className="bg-homeContentsColor px-4 pt-8 pb-4 mx-3 box-border h-full text-emerald-500 text-center border-8 border-double border-teal-500 rounded-xl hover:scale-110 duration-1000"
           >
             <h1 className="text-2xl font-bold text-green-300 h-1/3">
               {title}&nbsp;→

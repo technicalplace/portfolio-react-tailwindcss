@@ -6,6 +6,8 @@ import { Career } from "../components/Career/Career";
 import { Sns } from "../components/Sns/Sns";
 import { SelfStudy } from "../components/SelfStudy/SelfStudy";
 import { Calculator } from "../components/Application/Calculator/Calculator";
+import { CountUpDown } from "../components/Application/CountUpDown/CountUpDown";
+import { Recipe } from "../components/Application/RecipeSearch/Recipe";
 
 
 export const Routing = () => {
@@ -17,6 +19,8 @@ export const Routing = () => {
       <Route path="/Sns" element={<Sns />}></Route>
       <Route path="/SelfStudy" element={<SelfStudy />}></Route>
       <Route path="/Application/Calculate" element={<Calculator />}></Route>
+      <Route path="/Application/CountUpDown" element={<CountUpDown />}></Route>
+      <Route path="/Application/RecipeSearch" element={<Recipe />}></Route>
     </Routes>
   );
 };

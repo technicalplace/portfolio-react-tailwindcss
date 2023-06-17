@@ -1,41 +1,39 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
+import { ToHomeButton } from './ToHomeButton';
 
 const meta = {
-  title: 'Example/Button',
-  component: Button,
-  tags: ['autodocs'],
+  title: 'components/Application/ToHomeButton',
+  component: ToHomeButton,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} satisfies Meta<typeof Button>;
-
+} satisfies Meta<typeof ToHomeButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
     primary: true,
-    label: 'Button',
+    label: 'Home',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
+    primary: false,
+    label: 'BackHome',
   },
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
-    label: 'Button',
-  },
-};
+    label: 'Home'
+  }
+}
+export const Large: Story = {
+  args: {
+    size: 'large',
+    label: 'Home'
+  }
+}

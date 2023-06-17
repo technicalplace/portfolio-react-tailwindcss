@@ -1,4 +1,4 @@
-export function Calculate(button: string, state: State): State {
+export function Calculate(button: string, state: State): State { // Stateというインターフェースを作成する
   // 数値かどうか
   if (isNumberButton(button)) {
     return handleNumberButton(button, state);
@@ -25,7 +25,7 @@ export function Calculate(button: string, state: State): State {
   }
   return state;
 }
-export interface State {
+export interface State { // Stateというインターフェース
   current: string; // 現在表示している内容
   operand: number; // 計算に使う数値を記憶
   operator: string | null; // どの計算をしようとしているか（足し算か引き算か）
@@ -55,6 +55,7 @@ function handleNumberButton(button: string, state: State): State {
       isNextClear: false,
     };
   }
+  // 今の表示が0の時は（次の状態として）今表示している値は押したボタンの値
   if (state.current === "0") {
     return {
       current: button,
@@ -63,6 +64,7 @@ function handleNumberButton(button: string, state: State): State {
       isNextClear: false,
     };
   }
+  // 今の表示が0以外の時は後ろに押したボタンの値を付け足す
   return {
     current: state.current + button,
     operand: state.operand,
@@ -75,6 +77,7 @@ function isOperatorButton(button: string) {
 }
 
 function handleOperatorButton(button: string, state: State): State {
+  // 押されていない場合
   if (state.operator === null) {
     return {
       current: state.current,

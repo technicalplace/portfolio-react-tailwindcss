@@ -3,7 +3,6 @@ import { IconContext } from "react-icons";
 import { FaCalculator } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 type AppListProps = {
   item: {
     id: number,
@@ -12,7 +11,6 @@ type AppListProps = {
     description: string
   };
 };
-
 
 export const AppList = ({ item }: AppListProps) => {
   return (

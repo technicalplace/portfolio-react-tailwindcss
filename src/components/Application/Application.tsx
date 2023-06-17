@@ -23,27 +23,45 @@ export const Application = () => {
     },
     {
       id: 2,
+      icon: '',
       appName: 'Todo List',
       url: 'TodoList',
       description: 'I created a TodoList app using React. Please feel free to take a look.',
     },
     {
       id: 3,
+      icon: '',
       appName: 'Pagination',
       url: 'Pagination',
       description: 'I created a pagination feature using React. Please feel free to take a look.',
     },
     {
       id: 4,
+      icon: '',
       appName: 'Modal',
       url: 'Modal',
       description: 'I created a modal feature using React. Please feel free to take a look.',
     },
     {
       id: 5,
+      icon: '',
       appName: 'Toggle Button',
       url: 'ToggleButton',
       description: 'I created a Toggle Button feature using React. Please feel free to take a look.',
+    },
+    {
+      id: 6,
+      icon: '',
+      appName: 'Count Up Down',
+      url: 'CountUpDown',
+      description: 'I created a Count Up and Down feature using React. Please feel free to take a look.',
+    },
+    {
+      id: 7,
+      icon: '',
+      appName: 'Recipe Search',
+      url: 'RecipeSearch',
+      description: 'I created a Recipe Search feature using React. Please feel free to take a look.',
     },
   ]
 
