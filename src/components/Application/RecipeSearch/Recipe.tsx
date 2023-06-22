@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { RecipeShow } from "./RecipeShow";
+import { Link } from "react-router-dom";
 
 export const Recipe = () => {
   const APP_ID = "677c4ba3";
@@ -39,7 +40,7 @@ export const Recipe = () => {
   }, [query]);
 
   return (
-    <div className="h-full bg-slate-300">
+    <div className="h-full bg-slate-300 pb-24">
       <form className="text-center pt-9" onSubmit={getSearch}>
         <input
           className="w-60 py-3 rounded-lg outline-none"
@@ -57,7 +58,8 @@ export const Recipe = () => {
         </button>
       </form>
       <div>
-        {recipes.map((recipe: { recipe: any; label: string; calories: number }) => (
+        {recipes.map(
+          (recipe: { recipe: any; label: string; calories: number }) => (
             <RecipeShow
               key={recipe.recipe.label}
               title={recipe.recipe.label}
@@ -68,6 +70,9 @@ export const Recipe = () => {
           )
         )}
       </div>
+      <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+        <Link to="/Application">Application Page&nbsp;→</Link>
+      </button>
     </div>
   );
 };

@@ -1,69 +1,88 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Link } from "react-router-dom"
 import { AppList } from "./AppList";
-import { CiImageOn } from "react-icons/ci";
 import { FaCalculator } from "react-icons/fa";
+import { IoIosPhotos } from "react-icons/io";
+import { FcTodoList } from "react-icons/fc";
+import { BiLastPage } from "react-icons/bi";
+import { FaRegWindowRestore } from "react-icons/fa";
+import { BsToggleOn } from "react-icons/bs";
+import { TbNumbers } from "react-icons/tb";
+import { MdOutlineDinnerDining } from "react-icons/md";
+import { MdCatchingPokemon } from "react-icons/md";
 
-
-export const Application = () => {
-  const appListDetails = [
+export const Application: React.VFC = () => {
+  const appListDetails: {
+    id: number,
+    icon: ReactNode,
+    appName: string,
+    url: string,
+    description: string,
+  }[] = [
     {
       id: 0,
-      icon: <CiImageOn />,
-      appName: 'Photo Search App',
+      icon: <IoIosPhotos />,
+      appName: '写真検索アプリ',
       url: 'PhotoSearch',
       description: 'I created a photo search app using React. Please feel free to take a look.',
     },
     {
       id: 1,
       icon: <FaCalculator />,
-      appName: 'Simple calculator app',
+      appName: '簡単な電卓アプリ',
       url: 'Calculate',
       description: 'I created a simple calculator app using React and TypeScript, Please feel free to take a look.',
     },
     {
       id: 2,
-      icon: '',
-      appName: 'Todo List',
+      icon: <FcTodoList />,
+      appName: 'Todoリスト',
       url: 'TodoList',
       description: 'I created a TodoList app using React. Please feel free to take a look.',
     },
     {
       id: 3,
-      icon: '',
-      appName: 'Pagination',
+      icon: <BiLastPage />,
+      appName: 'ページネーション',
       url: 'Pagination',
       description: 'I created a pagination feature using React. Please feel free to take a look.',
     },
     {
       id: 4,
-      icon: '',
-      appName: 'Modal',
+      icon: <FaRegWindowRestore />,
+      appName: 'モーダル',
       url: 'Modal',
       description: 'I created a modal feature using React. Please feel free to take a look.',
     },
     {
       id: 5,
-      icon: '',
-      appName: 'Toggle Button',
+      icon: <BsToggleOn />,
+      appName: 'Toggleボタン',
       url: 'ToggleButton',
       description: 'I created a Toggle Button feature using React. Please feel free to take a look.',
     },
     {
       id: 6,
-      icon: '',
-      appName: 'Count Up Down',
+      icon: <TbNumbers />,
+      appName: 'カウントアプリ',
       url: 'CountUpDown',
       description: 'I created a Count Up and Down feature using React. Please feel free to take a look.',
     },
     {
       id: 7,
-      icon: '',
-      appName: 'Recipe Search',
+      icon: <MdOutlineDinnerDining />,
+      appName: 'レシピ検索アプリ',
       url: 'RecipeSearch',
       description: 'I created a Recipe Search feature using React. Please feel free to take a look.',
     },
-  ]
+    {
+      id: 8,
+      icon: <MdCatchingPokemon />,
+      appName: 'ポケモン図鑑',
+      url: 'PokemonPictorialBook',
+      description: 'I created a PokemonPictorialBook feature using React. Please feel free to take a look.',
+    },
+  ];
 
   return (
     <section className="body-font">
@@ -78,9 +97,9 @@ export const Application = () => {
           </p>
         </div>
         <div className="flex flex-wrap items-center -m-4 text-green-100">
-          {appListDetails.map(({ id }) => {
+          {appListDetails.map(({ id, ...props}) => {
             return (
-              <AppList item={appListDetails[id]} />
+              <AppList id={id} key={id} {...props} />
             )
           })}
         </div>

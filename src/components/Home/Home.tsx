@@ -27,9 +27,9 @@ export const Home = () => {
     },
     {
       id: 3,
-      href: "/SelfStudy",
-      children: "SelfStudy",
-      title: "Self-study",
+      href: "/Contact",
+      children: "Contact",
+      title: "Contact",
       description:
         "I am writing about the things I consciously focus on when I study",
     },
@@ -41,12 +41,12 @@ export const Home = () => {
           <Link
             key={id}
             to={href}
-            className="bg-homeContentsColor px-4 pt-8 pb-4 mx-3 box-border h-full text-emerald-500 text-center border-8 border-double border-teal-500 rounded-xl hover:scale-110 duration-1000"
+            className=" bg-slate-300 px-4 pt-10 pb-4 mx-3 box-border h-full text-emerald-500 text-center border-8 border-double border-teal-500 rounded-xl hover:scale-110 duration-1000"
           >
-            <h1 className="text-2xl font-bold text-green-300 h-1/3">
+            <h1 className="text-3xl font-bold text-slate-700 h-1/3">
               {title}&nbsp;→
             </h1>
-            <p className="w-full h-2/3 box-border">{description}</p>
+            <p className="w-full h-2/3 box-border mt-3 text-slate-600">{description}</p>
           </Link>
         );
       })}
