@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ type AppListProps = {
   description: string;
 };
 
-export const AppList = ({ icon, appName, url, description }: AppListProps) => {
+export const AppList:FC<AppListProps> = ({ icon, appName, url, description }: AppListProps) => {
   return (
     <div className="xl:w-1/3 md:w-1/2 p-4">
       <div className="border-4 border-double border-green-200 p-6 mx-auto w-3/4 rounded-full text-center">

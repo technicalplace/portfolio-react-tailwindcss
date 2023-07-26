@@ -8,6 +8,9 @@ import { Contact } from "../components/Contact/Contact";
 import { Calculator } from "../components/Application/Calculator/Calculator";
 import { CountUpDown } from "../components/Application/CountUpDown/CountUpDown";
 import { Recipe } from "../components/Application/RecipeSearch/Recipe";
+import { Modal } from "../components/Application/Modal/Modal";
+import { PhotoSearch } from "../components/Application/PhotoSearch/PhotoSearch";
+import { Pokemon } from "../components/Application/Pokemon/Pokemon";
 
 
 export const Routing = () => {
@@ -21,6 +24,9 @@ export const Routing = () => {
       <Route path="/Application/Calculate" element={<Calculator />}></Route>
       <Route path="/Application/CountUpDown" element={<CountUpDown />}></Route>
       <Route path="/Application/RecipeSearch" element={<Recipe />}></Route>
+      <Route path="/Application/Modal" element={<Modal />}></Route>
+      <Route path="/Application/PhotoSearch" element={<PhotoSearch />}></Route>
+      <Route path="/Application/PokemonPictorialBook" element={<Pokemon />}></Route>
     </Routes>
   );
 };

@@ -1,4 +1,5 @@
-export function Calculate(button: string, state: State): State { // Stateというインターフェースを作成する
+export function Calculate(button: string, state: State): State {
+  // Stateというインターフェースを作成する
   // 数値かどうか
   if (isNumberButton(button)) {
     return handleNumberButton(button, state);
@@ -25,7 +26,8 @@ export function Calculate(button: string, state: State): State { // Stateとい�
   }
   return state;
 }
-export interface State { // Stateというインターフェース
+export interface State {
+  // Stateというインターフェース
   current: string; // 現在表示している内容
   operand: number; // 計算に使う数値を記憶
   operator: string | null; // どの計算をしようとしているか（足し算か引き算か）
@@ -46,13 +48,14 @@ function isNumberButton(button: string) {
     button === "9"
   );
 }
+// 数値キーを押したときの状態遷移
 function handleNumberButton(button: string, state: State): State {
   if (state.isNextClear) {
     return {
       current: button,
       operand: state.operand,
       operator: state.operator,
-      isNextClear: false,
+      isNextClear: true,
     };
   }
   // 今の表示が0の時は（次の状態として）今表示している値は押したボタンの値
@@ -86,10 +89,11 @@ function handleOperatorButton(button: string, state: State): State {
       isNextClear: true,
     };
   }
+  const operand = parseFloat(state.current);
   const nextValue = operate(state);
   return {
     current: `${nextValue}`,
-    operand: nextValue,
+    operand: operand,
     operator: button,
     isNextClear: true,
   };
@@ -156,6 +160,7 @@ function handleEqualButton(state: State): State {
     isNextClear: true,
   };
 }
+
 function operate(state: State): number {
   const current = parseFloat(state.current); // currentを数値に変換
   if (state.operator === "+") {

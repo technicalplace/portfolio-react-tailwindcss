@@ -41,12 +41,12 @@ export const Home = () => {
           <Link
             key={id}
             to={href}
-            className=" bg-slate-300 px-4 pt-10 pb-4 mx-3 box-border h-full text-emerald-500 text-center border-8 border-double border-teal-500 rounded-xl hover:scale-110 duration-1000"
+            className="px-4 pt-10 pb-4 mx-3 box-border h-full text-emerald-500 text-center border-8 border-double border-cyan-600 rounded-xl hover:scale-110 duration-1000"
           >
-            <h1 className="text-3xl font-bold text-slate-700 h-1/3">
+            <h1 className="text-3xl font-bold text-slate-200 h-1/3">
               {title}&nbsp;→
             </h1>
-            <p className="w-full h-2/3 box-border mt-3 text-slate-600">{description}</p>
+            <p className="w-full h-2/3 box-border mt-3 text-slate-300">{description}</p>
           </Link>
         );
       })}

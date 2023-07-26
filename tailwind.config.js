@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        homeColor: '#02aa7d',
-        homeContentsColor: '#c0f8e9'
+      boxShadow: {
+        card: '4px 7px 19px 6px #2b52ee',
+        btn: '4px 7px 10px 1px #385be5',
       }
     },
   },
