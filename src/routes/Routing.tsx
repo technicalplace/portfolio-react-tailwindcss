@@ -11,6 +11,7 @@ import { Recipe } from "../components/Application/RecipeSearch/Recipe";
 import { Modal } from "../components/Application/Modal/Modal";
 import { PhotoSearch } from "../components/Application/PhotoSearch/PhotoSearch";
 import { Pokemon } from "../components/Application/Pokemon/Pokemon";
+import { BookSearch } from "../components/Application/BookSearch/BookSearch";
 
 
 export const Routing = () => {
@@ -27,6 +28,7 @@ export const Routing = () => {
       <Route path="/Application/Modal" element={<Modal />}></Route>
       <Route path="/Application/PhotoSearch" element={<PhotoSearch />}></Route>
       <Route path="/Application/PokemonPictorialBook" element={<Pokemon />}></Route>
+      <Route path="/Application/BookSearch" element={<BookSearch />}></Route>
     </Routes>
   );
 };

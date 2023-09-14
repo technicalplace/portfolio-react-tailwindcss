@@ -21,6 +21,7 @@ export const Pokemon = () => {
       setNextURL(res.next);
       // 前のページのポケモンのURLをセットする
       setPrevURL(res.previous);
+      // console.log(res);
       // データが取得できたらfalseにする
       setLoading(false);
     }

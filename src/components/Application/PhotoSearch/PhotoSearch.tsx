@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { ImageGallery } from "./ImageGallery";
+import { Link } from "react-router-dom";
 
 export const PhotoSearch: React.FC = () => {
   const [fetchData, setFetchData] = useState([]);
@@ -50,6 +51,9 @@ export const PhotoSearch: React.FC = () => {
         {/* <p>{ err ? errorMessage : '' }</p> */}
       </form>
       <ImageGallery fetchData={fetchData} />
+      <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+        <Link to="/Application">Application Page&nbsp;→</Link>
+      </button>
     </div>
   );
 };

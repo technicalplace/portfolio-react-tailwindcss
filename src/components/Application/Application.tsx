@@ -82,6 +82,13 @@ export const Application: React.VFC = () => {
       url: 'PokemonPictorialBook',
       description: 'I created a PokemonPictorialBook feature using React. Please feel free to take a look.',
     },
+    {
+      id: 9,
+      icon: '',
+      appName: '本検索アプリ',
+      url: 'BookSearch',
+      description: 'I created a BookSearch feature using React. Please feel free to take a look.',
+    },
   ];
 
   return (

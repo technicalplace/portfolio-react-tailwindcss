@@ -22,7 +22,6 @@ export const Recipe = () => {
     );
     const data = await response.json();
     setRecipes(data.hits);
-    console.log(data.hits);
   };
   const getSearch = (e: { preventDefault: () => void }) => {
     e.preventDefault();
