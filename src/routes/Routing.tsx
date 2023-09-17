@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Home } from "../components/Home/Home";
 import { Application } from "../components/Application/Application";
 import { Career } from "../components/Career/Career";
-import { Sns } from "../components/Sns/Sns";
+import { Blog } from "../components/Blog/Blog";
 import { Contact } from "../components/Contact/Contact";
 import { Calculator } from "../components/Application/Calculator/Calculator";
 import { CountUpDown } from "../components/Application/CountUpDown/CountUpDown";
@@ -12,6 +12,7 @@ import { Modal } from "../components/Application/Modal/Modal";
 import { PhotoSearch } from "../components/Application/PhotoSearch/PhotoSearch";
 import { Pokemon } from "../components/Application/Pokemon/Pokemon";
 import { BookSearch } from "../components/Application/BookSearch/BookSearch";
+import { Kanban } from "../components/Application/KanbanBoard/Kanaban";
 
 
 export const Routing = () => {
@@ -20,7 +21,7 @@ export const Routing = () => {
       <Route path="/" element={<Home />}></Route>
       <Route path="/Application" element={<Application />}></Route>
       <Route path="/Career" element={<Career />}></Route>
-      <Route path="/Sns" element={<Sns />}></Route>
+      <Route path="/Blog" element={<Blog />}></Route>
       <Route path="/Contact" element={<Contact />}></Route>
       <Route path="/Application/Calculate" element={<Calculator />}></Route>
       <Route path="/Application/CountUpDown" element={<CountUpDown />}></Route>
@@ -29,6 +30,7 @@ export const Routing = () => {
       <Route path="/Application/PhotoSearch" element={<PhotoSearch />}></Route>
       <Route path="/Application/PokemonPictorialBook" element={<Pokemon />}></Route>
       <Route path="/Application/BookSearch" element={<BookSearch />}></Route>
+      <Route path="/Application/KanbanBoard" element={<Kanban />}></Route>
     </Routes>
   );
 };

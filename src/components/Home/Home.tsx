@@ -19,11 +19,11 @@ export const Home = () => {
     },
     {
       id: 2,
-      href: "/Sns",
-      children: "Sns",
-      title: "SNS",
+      href: "/Blog",
+      children: "Blog",
+      title: "Blog",
       description:
-        "If you don't mind, please take a look at the various SNS I have listed",
+        "If you don't mind, please take a look at the various Blog I have listed",
     },
     {
       id: 3,
